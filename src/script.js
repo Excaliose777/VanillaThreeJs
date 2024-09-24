@@ -50,6 +50,7 @@ window.addEventListener("resize", () => {
 const geometry = new THREE.PlaneBufferGeometry(1, 1, 64, 64);
 const material = new THREE.RawShaderMaterial({
   side: THREE.DoubleSide,
+  wireframe: true,
   vertexShader: vShader,
   fragmentShader: fShader,
   uniforms: {
@@ -113,8 +114,8 @@ effectComposer.addPass(renderPass);
 // effectComposer.addPass(filmPass);
 
 //AfterImagePass
-const afterImagePass = new AfterimagePass();
-effectComposer.addPass(afterImagePass);
+// const afterImagePass = new AfterimagePass();
+// effectComposer.addPass(afterImagePass);
 
 //LuminosityShader
 // const luminosityShader = new ShaderPass(LuminosityShader);
